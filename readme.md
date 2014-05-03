@@ -1,21 +1,48 @@
-## Laravel PHP Framework
+## Laravel 4 with Sentry 2 - Version 2.0
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework) [![License](https://poser.pugx.org/laravel/framework/license.png)](https://packagist.org/packages/laravel/framework)
+This is a demo of [Sentry 2](https://github.com/cartalyst/sentry) integrated with [Laravel 4](https://github.com/laravel/laravel/tree/develop) and [Bootstrap 3.0](http://getbootstrap.com).  This repo is intended to be for reference only - if you want to use this code in your own app I suggest using [Sentinel](https://github.com/rydurham/Sentinel) - a laravel pacakge based on this repo.  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+### Instructions
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+Before you begin, make sure you have both ```git``` and ```composer``` installed on your system. 
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+1. Clone the repo
+2. Run ```php composer.phar update```
+3. Set up your datbase configuration in ```app/config/database.php```
+4. Edit ```app/config/mail.php``` to work with your mail setup.
+5. Run the migrations: ```php artisan migrate```
+6. Seed the Database: ```php artisan db:seed```
 
-## Official Documentation
+### Seeds
+The seeds in this repo will create two groups and two user accounts.
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+__Groups__
+* Users
+* Admins
 
-### Contributing To Laravel
+__Users__
+* user@user.com  *Password: sentryuser*
+* admin@admin.com *Password: sentryadmin*
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+### Links
+* [Sentry 2.0 Documentation](https://cartalyst.com/manual/sentry)
+* [Laravel 4 Documentation](http://laravel.com/docs)
+* [Laravel: From Apprentice To Artisan](https://leanpub.com/laravel) by Taylor Otwell
+* [Implementing Laravel](https://leanpub.com/implementinglaravel) by Chris Fidao
+* [Laracasts](http://laracasts.com)
 
-### License
+### Tests
+1. Make sure you've run `composer update`.
+2. cd to the L4withSentry project root directory.
+3. Execute `phpunit` to run tests or `phpunit --coverage-text` to see text based code coverage summary.
+4. If you're interested in more dynamic code coverage, check out the [instructions](COVERAGE.md).
 
+### Notes
+
+* Tests are currently very limited.  
+
+### History
+Version 2.0 has been completely revamped using strategies suggested in *Laravel: From Apprentice to Artisan* by Taylor Otwell, *Implementing Laravel* by Chris Fidao and the Laracast videos.   Version 1.0 still exists in its original version. 
+
+=======
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
