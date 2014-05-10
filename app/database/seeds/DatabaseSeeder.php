@@ -10,11 +10,11 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
-
+     //   $user = Sentry::register(array('email' => 'john@doe.com', 'password' => 'test'));
 		// $this->call('UserTableSeeder');
-		$this->call('SentryGroupSeeder');
-		$this->call('SentryUserSeeder');
-		$this->call('SentryUserGroupSeeder');
+	//	$this->call('SentryGroupSeeder');
+//		$this->call('SentryUserSeeder');
+		$this->call('TreeGroupTop');
 	}
 
 }
