@@ -1,42 +1,15 @@
 <?php
 
-class TreeGroupTop extends Seeder {
 
+class TreeGroupTop extends Seeder
+{
     public function run()
     {
         DB::table('tree_group_top')->delete();
-
-
-
-        Sentry::getUserProvider()->create(array(
-            'id'    => '1',
-            'name' => '[NULL]'
-        ));
-
-        Sentry::getUserProvider()->create(array(
-            'id'    => '10',
-            'name' => 'Úvodní strana'
-        ));
-
-        Sentry::getUserProvider()->create(array(
-            'id'    => '20',
-            'name' => 'Zboží'
-        ));
-
-        Sentry::getUserProvider()->create(array(
-            'id'    => '30',
-            'name' => 'Texty'
-        ));
-
-        Sentry::getUserProvider()->create(array(
-            'id'    => '80',
-            'name' => 'Různé'
-        ));
-
-        Sentry::getUserProvider()->create(array(
-            'id'    => '90',
-            'name' => 'Nákupní košík'
-        ));
-
+        DB::insert('INSERT INTO tree_group_top (id, name) VALUES (?, ?)', array(1, '[NULL]'));
+        DB::insert('INSERT INTO tree_group_top (id, name) VALUES (?, ?)', array(10, 'Úvodní strana'));
+        DB::insert('INSERT INTO tree_group_top (id, name) VALUES (?, ?)', array(20, 'Zboží'));
+        DB::insert('INSERT INTO tree_group_top (id, name) VALUES (?, ?)', array(50, 'Různé'));
+        DB::insert('INSERT INTO tree_group_top (id, name) VALUES (?, ?)', array(90, 'Nákupní košík'));
     }
 }
