@@ -1,5 +1,6 @@
-<?php namespace Authority\Mailers;
+<?php
 
+namespace Authority\Mailers;
 use Mail;
 
 abstract class Mailer

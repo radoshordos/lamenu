@@ -1,4 +1,6 @@
-<?php namespace Authority\Mailers;
+<?php
+
+namespace Authority\Mailers;
 
 class UserMailer extends Mailer
 {
