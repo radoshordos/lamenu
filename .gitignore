@@ -2,7 +2,6 @@
 .env.*.php
 .env.php
 .idea
-.idea/scopes
 .vagrant
 /app/config/defaultMailConfig.php
 /app/config/local/*
