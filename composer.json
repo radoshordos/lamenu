@@ -23,7 +23,10 @@
         }
     },
     "scripts": {
-        "post-update-cmd": "php artisan optimize"
+        "post-update-cmd": [
+                "php artisan optimize",
+                "php artisan command:adminer"
+            ]
     },
     "minimum-stability": "beta"
 }
