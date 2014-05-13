@@ -71,7 +71,7 @@ class UserController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('users.create');
+        return View::make('adm.users.create');
 	}
 
 	/**
@@ -94,7 +94,7 @@ class UserController extends BaseController {
 
             // Success!
             Session::flash('success', $result['message']);
-            return Redirect::route('home');
+            return Redirect::route('adm.home');
 
         } else {
             Session::flash('error', $result['message']);
@@ -121,7 +121,7 @@ class UserController extends BaseController {
             // @codeCoverageIgnoreEnd
         }
 
-        return View::make('users.show')->with('user', $user);
+        return View::make('adm.users.show')->with('user', $user);
 	}
 
 	/**
@@ -148,7 +148,7 @@ class UserController extends BaseController {
         }
         $allGroups = $this->group->all();
 
-        return View::make('users.edit')->with('user', $user)->with('userGroups', $userGroups)->with('allGroups', $allGroups);
+        return View::make('adm.users.edit')->with('user', $user)->with('userGroups', $userGroups)->with('allGroups', $allGroups);
 	}
 
 	/**
@@ -232,11 +232,11 @@ class UserController extends BaseController {
         {
             // Success!
             Session::flash('success', $result['message']);
-            return Redirect::route('home');
+            return Redirect::route('adm.home');
 
         } else {
             Session::flash('error', $result['message']);
-            return Redirect::route('home');
+            return Redirect::route('adm.home');
         }
 	}
 
@@ -259,7 +259,7 @@ class UserController extends BaseController {
 
             // Success!
             Session::flash('success', $result['message']);
-            return Redirect::route('home');
+            return Redirect::route('adm.home');
         } 
         else 
         {
@@ -289,7 +289,7 @@ class UserController extends BaseController {
 
             // Success!
             Session::flash('success', $result['message']);
-            return Redirect::route('home');
+            return Redirect::route('adm.home');
         } 
         else 
         {
@@ -326,11 +326,11 @@ class UserController extends BaseController {
 
             // Success!
             Session::flash('success', $result['message']);
-            return Redirect::route('home');
+            return Redirect::route('adm.home');
 
         } else {
             Session::flash('error', $result['message']);
-            return Redirect::route('home');
+            return Redirect::route('adm.home');
         }
 	}
 
@@ -358,7 +358,7 @@ class UserController extends BaseController {
         {
             // Success!
             Session::flash('success', $result['message']);
-            return Redirect::route('home');
+            return Redirect::route('adm.home');
         } 
         else 
         {

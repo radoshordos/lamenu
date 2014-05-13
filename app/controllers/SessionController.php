@@ -26,7 +26,7 @@ class SessionController extends BaseController
      */
     public function create()
     {
-        return View::make('sessions.login');
+        return View::make('adm.sessions.login');
     }
 
     /**

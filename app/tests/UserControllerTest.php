@@ -55,7 +55,7 @@ class UserControllerTest extends TestCase {
     {
         $this->beUser();
         $this->call('GET', URL::action('UserController@index'));
-        $this->assertRedirectedToRoute('home');
+        $this->assertRedirectedToroute('adm.home');
     }
 
     public function testUserControllerIndexAsAdmin()
@@ -126,7 +126,7 @@ class UserControllerTest extends TestCase {
     {
         $this->beUser();
         $this->call('get', URL::action('UserController@show', array('3')));
-        $this->assertRedirectedToRoute('home');
+        $this->assertRedirectedToroute('adm.home');
         $this->assertSessionHas('error','You are not allowed to do that.');
     }
 
@@ -148,7 +148,7 @@ class UserControllerTest extends TestCase {
     {
         $this->beUser();
         $this->call('get', URL::action('UserController@show', array('1')));
-        $this->assertRedirectedToRoute('home');
+        $this->assertRedirectedToroute('adm.home');
         $this->assertSessionHas('error','You are not allowed to do that.');
     }
 
@@ -174,7 +174,7 @@ class UserControllerTest extends TestCase {
     {
         $this->beUser();
         $this->call('delete', URL::action('UserController@destroy', array('-1')));
-        $this->assertRedirectedToRoute('home');
+        $this->assertRedirectedToroute('adm.home');
         $this->assertSessionHas('error','You are not allowed to do that.');
     }
 
@@ -197,7 +197,7 @@ class UserControllerTest extends TestCase {
     {
         $this->beUser();
         $this->call('delete', URL::action('UserController@destroy', array('1')));
-        $this->assertRedirectedToRoute('home');
+        $this->assertRedirectedToroute('adm.home');
         $this->assertSessionHas('error','You are not allowed to do that.');
     }
 
@@ -224,7 +224,7 @@ class UserControllerTest extends TestCase {
     {
         $this->beUser();
         $this->call('get', URL::action('UserController@edit', array('1')));
-        $this->assertRedirectedToRoute('home');
+        $this->assertRedirectedToroute('adm.home');
         $this->assertSessionHas('error','You are not allowed to do that.');
     }
 
@@ -247,7 +247,7 @@ class UserControllerTest extends TestCase {
     {
         $this->beUser();
         $this->call('get', URL::action('UserController@edit', array('3')));
-        $this->assertRedirectedToRoute('home');
+        $this->assertRedirectedToroute('adm.home');
         $this->assertSessionHas('error','You are not allowed to do that.');
     }
 
@@ -325,7 +325,7 @@ class UserControllerTest extends TestCase {
         $this->call('post', URL::action('UserController@store'), $input);
 
         $this->assertTrue($userSignupEventFired, 'The user.signup event never fired during UserController@store');
-        $this->assertRedirectedToRoute('home');
+        $this->assertRedirectedToroute('adm.home');
     }
 
 }

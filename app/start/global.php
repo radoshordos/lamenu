@@ -74,3 +74,9 @@ require __DIR__.'/../observables.php';
 |--------------------------------------------------------------------------
 */
 $app['Cartalyst\Sentry\Sentry'] = $app['sentry'];
+
+
+App::down(function()
+{
+    return Response::view('maintenance', array(), 503);
+});
