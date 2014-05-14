@@ -54,10 +54,10 @@ Route::filter('inGroup', function ($route, $request, $value) {
         }
     } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
         Session::flash('error', trans('users.notfound'));
-        return Redirect::route('login');
+        return Redirect::route('adm.login');
     } catch (Cartalyst\Sentry\Groups\GroupNotFoundException $e) {
         Session::flash('error', trans('groups.notfound'));
-        return Redirect::route('login');
+        return Redirect::route('adm.login');
     }
 });
 // thanks to http://laravelsnippets.com/snippets/sentry-route-filters

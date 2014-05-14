@@ -31,35 +31,32 @@
             <a class="navbar-brand" href="{{ URL::route('adm.home') }}">Administrační rozhraní</a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                @if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))
-                <li
-                {{ (Request::is('adm/users*') ? 'class="active"' : '') }}><a
-                    href="{{ URL::to('adm/users') }}">Users</a></li>
-                <li
-                {{ (Request::is('adm/groups*') ? 'class="active"' : '') }}><a
-                    href="{{ URL::to('adm/groups') }}">Groups</a></li>
-                @endif
-            </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Sentry::check())
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Účet<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li {{ (Request::is('adm/users/show/' . Session::get('userId')) ? 'class="active"' : '') }}>
-                            <a href="{{ URL::to('adm/users') }}/{{ Session::get('userId') }}">{{ Session::get('email') }}</a>
+                        <a href="{{ URL::to('adm/users') }}/{{ Session::get('userId') }}">{{ Session::get('email')
+                            }}</a>
                         </li>
+                        @if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))
+                        <li class="divider"></li>
+                        <li {{ (Request::is('adm/users*') ? 'class="active"' : '') }}>
+                            <a href="{{ URL::to('adm/users') }}">Uživatelé</a>
+                        </li>
+                        <li {{ (Request::is('adm/groups*') ? 'class="active"' : '') }}>
+                            <a href="{{ URL::to('adm/groups') }}">Skupiny</a></li>
+                        @endif
                         <li class="divider"></li>
                         <li><a href="{{ URL::to('adm/logout') }}">Logout</a></li>
                     </ul>
                 </li>
                 @else
-                <li
-                {{ (Request::is('adm/login') ? 'class="active"' : '') }}><a
-                    href="{{ URL::to('adm/login') }}">Login</a></li>
-                <li
-                {{ (Request::is('adm/users/create') ? 'class="active"' : '') }}><a
-                    href="{{ URL::to('adm/users/create') }}">Register</a></li>
+                <li {{ (Request::is('adm/login') ? 'class="active"' : '') }}>
+                    <a href="{{ URL::to('adm/login') }}">Login</a></li>
+                <li {{ (Request::is('adm/users/create') ? 'class="active"' : '') }}>
+                    <a href="{{ URL::to('adm/users/create') }}">Register</a></li>
                 @endif
             </ul>
         </div>

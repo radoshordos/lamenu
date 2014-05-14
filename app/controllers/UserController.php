@@ -61,7 +61,7 @@ class UserController extends BaseController {
 	{
         $users = $this->user->all();
       
-        return View::make('users.index')->with('users', $users);
+        return View::make('adm.users.index')->with('users', $users);
 	}
 
 	/**

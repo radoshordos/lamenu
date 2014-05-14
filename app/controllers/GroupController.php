@@ -31,7 +31,7 @@ class GroupController extends BaseController {
 	public function index()
 	{
 		$groups = $this->group->all();
-		return View::make('groups.index')->with('groups', $groups);
+		return View::make('adm.groups.index')->with('groups', $groups);
 	}
 
 	/**
@@ -42,7 +42,7 @@ class GroupController extends BaseController {
 	public function create()
 	{
 		//Form for creating a new Group
-		return View::make('groups.create');
+		return View::make('adm.groups.create');
 	}
 
 	/**
@@ -90,7 +90,7 @@ class GroupController extends BaseController {
 	public function edit($id)
 	{
 		$group = $this->group->byId($id);
-		return View::make('groups.edit')->with('group', $group);
+		return View::make('adm.groups.edit')->with('group', $group);
 	}
 
 	/**

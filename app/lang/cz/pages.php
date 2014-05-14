@@ -4,7 +4,7 @@ return array(
 
 	'flashsuccess'	=> 'Success',
 	'flasherror'	=> 'Error',
-	'flashwarning'	=> 'Warning',
+	'flashwarning'	=> 'Varování',
 	'flashinfo'		=> 'FYI',
 	'register'		=> 'Register',
 	'login'			=> "Login",
@@ -17,7 +17,7 @@ return array(
 	'description'	=> "Vítejte",
 	'loginstatus'	=> "You are currently logged in.",
 	'sessiondata'	=> "Session Data",
-	'currentusers'	=> "Current Users",
+	'currentusers'	=> "Součastní uživatelé",
 	'options'		=> 'Options',
 	'status'		=> "Status",
 	'active'		=> "Active",
