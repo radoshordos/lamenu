@@ -38,7 +38,9 @@ Route::filter('auth', function () {
 });
 
 Route::filter('inGroup', function ($route, $request, $value) {
-    if (!Sentry::check()) return Redirect::route('adm.login');
+    if (!Sentry::check()) {
+        return Redirect::route('adm.login');
+    }
 
     // we need to determine if a non admin user
     // is trying to access their own account.

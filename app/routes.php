@@ -1,5 +1,14 @@
 <?php
 
+Route::get('/', function()
+{    return 'Hello World';
+});
+
+
+// Nastavení routy
+Route::get('adm/nastaveni/tree-group-top', array('uses' => 'NastaveniTree2group2topController@create'));
+
+
 // Session Routes
 Route::get('adm/login', array('as' => 'adm.login', 'uses' => 'SessionController@create'));
 Route::get('adm/logout', array('as' => 'adm.logout', 'uses' => 'SessionController@destroy'));

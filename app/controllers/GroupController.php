@@ -79,7 +79,7 @@ class GroupController extends BaseController {
 		//Show a group and its permissions. 
 		$group = $this->group->byId($id);
 
-		return View::make('groups.show')->with('group', $group);
+		return View::make('adm.groups.show')->with('group', $group);
 	}
 
 	/**
@@ -126,12 +126,12 @@ class GroupController extends BaseController {
 	{
 		if ($this->group->destroy($id))
 		{
-			Session::flash('success', 'Group Deleted');
+			Session::flash('success', 'Skupina Deleted');
             return Redirect::to('adm/groups');
         }
         else 
         {
-        	Session::flash('error', 'Unable to Delete Group');
+        	Session::flash('error', 'Nelze smazat tuto skupinu');
             return Redirect::to('adm/groups');
         }
 	}

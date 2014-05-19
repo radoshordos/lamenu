@@ -31,6 +31,24 @@
             <a class="navbar-brand" href="{{ URL::route('adm.home') }}">Administrační rozhraní</a>
         </div>
         <div class="collapse navbar-collapse">
+
+            @if (Sentry::check())
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nastavení <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="adm/nastaveni/tree-group-top/">tree-group-top</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            @endif
+
             <ul class="nav navbar-nav navbar-right">
                 @if (Sentry::check())
                 <li class="dropdown">

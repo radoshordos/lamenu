@@ -20,7 +20,7 @@ View Group
     </div>
     <div class="col-md-2">
         <button class="btn btn-primary"
-                onClick="location.href='{{ action('GroupController@edit', array($group->id)) }}'">Edit Group
+                onClick="location.href='{{ action('GroupController@edit', array($group->id)) }}'">Editovat skupinu
         </button>
     </div>
 </div>

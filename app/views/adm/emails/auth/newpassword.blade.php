@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<h2>New Password</h2>
+		<h2>Nové heslo</h2>
 
-		<p>Here is your new password:</p>
+		<p>Zde je tvé nové heslo:</p>
 		<p><blockquote>{{{ $newPassword }}}</blockquote></p>
 		<p>Thank you, <br />
-			~The Admin Team</p>
+			Admin Team (Rados)</p>
 	</body>
 </html>

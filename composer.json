@@ -1,8 +1,8 @@
 {
     "require": {
-        "laravel/framework": "4.2.*",
+        "laravel/framework": "4.*",
         "cartalyst/sentry": "2.*",
-        "dg/adminer-custom": "dev-master"
+        "dg/adminer-custom": "*"
     },
     "require-dev": {
         "way/generators": "~2.6",

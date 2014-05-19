@@ -11,7 +11,7 @@ Create Group
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
 	{{ Form::open(array('action' => 'GroupController@store')) }}
-        <h2>Create New Group</h2>
+        <h2>Vytvořit novou skupinu</h2>
     
         <div class="form-group {{ ($errors->has('name')) ? 'has-error' : '' }}">
             {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Name')) }}
@@ -21,15 +21,17 @@ Create Group
         {{ Form::label('Permissions') }}
         <div class="form-group">
             <label class="checkbox-inline">
-                {{ Form::checkbox('adminPermissions', 1) }} Admin
+                {{ Form::checkbox('adminPermissions', 1) }} Admins
             </label>
             <label class="checkbox-inline">
-                {{ Form::checkbox('userPermissions', 1) }} User
+                {{ Form::checkbox('powerUserPermissions', 1) }} Power Users
             </label>
-
+            <label class="checkbox-inline">
+                {{ Form::checkbox('simpleUserPermissions', 1) }} Simple Users
+            </label>
         </div>
 
-        {{ Form::submit('Create New Group', array('class' => 'btn btn-primary')) }}
+        {{ Form::submit('Vytvořit novou skupinu', array('class' => 'btn btn-primary')) }}
 
     {{ Form::close() }}
     </div>

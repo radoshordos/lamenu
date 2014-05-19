@@ -3,41 +3,40 @@
 {{-- Web site Title --}}
 @section('title')
 @parent
-Groups
+Skupiny
 @stop
 
 {{-- Content --}}
 @section('content')
-<h4>Available Groups</h4>
+<h4>Existující skupiny</h4>
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
 	<div class="table-responsive">
 		<table class="table table-striped table-hover">
 			<thead>
-				<th>Name</th>
-				<th>Permissions</th>
-				<th>Options</th>
+				<th>Jméno skupiny</th>
+				<th>Oprávnění</th>
+				<th>Možnosti</th>
 			</thead>
 			<tbody>
 			@foreach ($groups as $group)
 				<tr>
-					<td><a href="adm/groups/{{ $group->id }}">{{ $group->name }}</a></td>
-					<td>{{ (isset($group['permissions']['admin'])) ? '<i class="icon-ok"></i> Admin' : ''}} {{ (isset($group['permissions']['users'])) ? '<i class="icon-ok"></i> Users' : ''}}</td>
+					<td><a href="groups/{{ $group->id }}">{{ $group->name }}</a></td>
+					<td><p>{{ (isset($group['permissions']['admin'])) ? '<i class="icon-ok"></i> Admin' : ''}}</p>
+                        <p>{{ (isset($group['permissions']['power'])) ? '<i class="icon-ok"></i> Power User' : ''}}</p>
+                        <p>{{ (isset($group['permissions']['simple'])) ? '<i class="icon-ok"></i> Simple User' : ''}}</p>
+                    </td>
 					<td>
-						<button class="btn btn-default" onClick="location.href='{{ action('GroupController@edit', array($group->id)) }}'">Edit</button>
-					 	<button class="btn btn-default action_confirm {{ ($group->id == 2) ? 'disabled' : '' }}" type="button" data-method="delete" href="{{ URL::to('adm/groups') }}/{{ $group->id }}">Delete</button>
+						<button class="btn btn-default" onClick="location.href='{{ action('GroupController@edit', array($group->id)) }}'">Editovat</button>
+					 	<button class="btn btn-default action_confirm {{ ($group->id == 1) ? 'disabled' : '' }}" type="button" data-method="delete" href="{{ URL::to('adm/groups') }}/{{ $group->id }}">Smazat</button>
 					 </td>
 				</tr>	
 			@endforeach
 			</tbody>
 		</table> 
 	</div>
-	 <button class="btn btn-primary" onClick="location.href='{{ URL::to('adm/groups/create') }}'">New Group</button>
+	 <button class="btn btn-primary" onClick="location.href='{{ URL::to('adm/groups/create') }}'">Nová skupina</button>
    </div>
 </div>
-<!--  
-	The delete button uses Resftulizer.js to restfully submit with "Delete".  The "action_confirm" class triggers an optional confirm dialog.
-	Also, I have hardcoded adding the "disabled" class to the Admin group - deleting your own admin access causes problems.
--->
-@stop
 
+@stop
