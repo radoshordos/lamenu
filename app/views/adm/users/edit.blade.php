@@ -28,7 +28,7 @@ Profile</h4>
         <div class="form-group {{ ($errors->has('firstName')) ? 'has-error' : '' }}" for="firstName">
             {{ Form::label('edit_firstName', 'Jméno', array('class' => 'col-sm-2 control-label')) }}
             <div class="col-sm-10">
-              {{ Form::text('firstName', $user->first_name, array('class' => 'form-control', 'placeholder' => 'First Name', 'id' => 'edit_firstName'))}}
+              {{ Form::text('firstName', $user->first_name, array('class' => 'form-control', 'placeholder' => 'Jméno', 'id' => 'edit_firstName'))}}
             </div>
             {{ ($errors->has('firstName') ? $errors->first('firstName') : '') }}    			
     	</div>
@@ -37,7 +37,7 @@ Profile</h4>
         <div class="form-group {{ ($errors->has('lastName')) ? 'has-error' : '' }}" for="lastName">
             {{ Form::label('edit_lastName', 'Příjmení', array('class' => 'col-sm-2 control-label')) }}
             <div class="col-sm-10">
-              {{ Form::text('lastName', $user->last_name, array('class' => 'form-control', 'placeholder' => 'Last Name', 'id' => 'edit_lastName'))}}
+              {{ Form::text('lastName', $user->last_name, array('class' => 'form-control', 'placeholder' => 'Příjmení', 'id' => 'edit_lastName'))}}
             </div>
             {{ ($errors->has('lastName') ? $errors->first('lastName') : '') }}                
         </div>

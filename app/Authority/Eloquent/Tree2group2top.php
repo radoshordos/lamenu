@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin\Eloquent;
+namespace Authority\Eloquent;
 
 class Tree2group2top extends \Eloquent
 {
