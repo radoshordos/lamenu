@@ -6,7 +6,7 @@ Route::get('/', function()
 
 
 // Nastavení routy
-Route::get('adm/nastaveni/tree-group-top', array('uses' => 'NastaveniTree2group2topController@create'));
+Route::get('adm/nastaveni/tree-group-top', array('as' => 'adm.nastaveni.tree2group2top','uses' => 'Tree2group2topController@show'));
 
 
 // Session Routes

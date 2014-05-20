@@ -2,6 +2,7 @@
     "require": {
         "laravel/framework": "4.*",
         "cartalyst/sentry": "2.*",
+        "twbs/bootstrap": "3.*",
         "dg/adminer-custom": "*"
     },
     "require-dev": {

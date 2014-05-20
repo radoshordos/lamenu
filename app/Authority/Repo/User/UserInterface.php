@@ -1,43 +1,46 @@
-<?php namespace Authority\Repo\User;
+<?php
 
-interface UserInterface {
+namespace Authority\Repo\User;
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store($data);
-	
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id);
+interface UserInterface
+{
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id);
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store($data);
 
-	/**
-	 * Return a specific user from the given id
-	 * 
-	 * @param  integer $id
-	 * @return User
-	 */
-	public function byId($id);
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function update($id);
 
-	/**
-	 * Return all the registered users
-	 *
-	 * @return stdObject Collection of users
-	 */
-	public function all();
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function destroy($id);
+
+    /**
+     * Return a specific user from the given id
+     *
+     * @param  integer $id
+     * @return User
+     */
+    public function byId($id);
+
+    /**
+     * Return all the registered users
+     *
+     * @return stdObject Collection of users
+     */
+    public function all();
 
 }

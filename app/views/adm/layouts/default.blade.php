@@ -37,7 +37,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nastavení <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="adm/nastaveni/tree-group-top/">tree-group-top</a></li>
+                        <li><a href="{{ URL::route('adm.nastaveni.tree2group2top') }}">tree-group-top</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
                         <li class="divider"></li>
