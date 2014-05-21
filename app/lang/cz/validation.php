@@ -25,7 +25,7 @@ return array(
 		"file"    => "The :attribute must be between :min - :max kilobytes.",
 		"string"  => "The :attribute must be between :min - :max characters.",
 	),
-	"confirmed"        => "The :attribute confirmation does not match.",
+	"confirmed"        => "Položka \":attribute\" se neschoduje.",
 	"date"             => "The :attribute is not a valid date.",
 	"date_format"      => "The :attribute does not match the format :format.",
 	"different"        => "The :attribute and :other must be different.",

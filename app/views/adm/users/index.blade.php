@@ -40,7 +40,10 @@ Home
 				@endforeach
 			</tbody>
 		</table>
-	</div>
+
+        <button class="btn btn-primary" onClick="location.href='{{ URL::to('adm/users/create') }}'">Registovat nového uživatele</button>
+
+    </div>
   </div>
 </div>
 @stop
